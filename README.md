@@ -1,6 +1,6 @@
 # EDGE Mid Term Project
 
-Welcome to the **EDGE Mid Term Project**! This repository contains the code and resources for assignments showcasing key concepts and solutions implemented during the assessment. It includes multiple sub-projects based on **Dart** and **Flutter** development.
+**EDGE Mid Term Project**! This repository contains the code and resources for assignments showcasing key concepts and solutions implemented during the assessment. It includes multiple sub-projects based on **Dart** and **Flutter** development.
 
 ---
 
