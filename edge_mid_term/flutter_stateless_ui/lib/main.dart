@@ -1,14 +1,14 @@
 // main fucntion start from here
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       //added custom widget in home
       home: _Home_page() ,
     );
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
 
 //make a custom widgets and it not accessable in other file
 class _Home_page extends StatelessWidget {
-  const _Home_page({super.key});
+  const _Home_page();
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _Home_page extends StatelessWidget {
         backgroundColor: Colors.blue,
         title: const Text('Flutter Stateless UI'),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

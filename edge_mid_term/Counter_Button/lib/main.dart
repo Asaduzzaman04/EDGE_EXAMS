@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
 }
 
 class CounterScreen extends StatefulWidget {
+  const CounterScreen({super.key});
+
   @override
   _CounterScreenState createState() => _CounterScreenState();
 }
@@ -38,7 +42,7 @@ class _CounterScreenState extends State<CounterScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Counter App',
           style: TextStyle(color: Colors.white),
         ),
@@ -49,36 +53,36 @@ class _CounterScreenState extends State<CounterScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
+            const Icon(
               Icons.touch_app,
               size: 100,
               color: Colors.deepPurple,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _incrementCounter,
-              child: Text(
-                'Press Me!',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
                 shadowColor: Colors.deepPurpleAccent,
                 elevation: 10,
               ),
+              child: Text(
+                'Press Me!',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Text(
               'Button Pressed $_counter times!',
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 18,
                   color: Colors.deepPurple,
                   fontWeight: FontWeight.w600),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               'Press the button to see how many times it’s pressed!',
               style: TextStyle(fontSize: 16, color: Colors.deepPurple[600]),

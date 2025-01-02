@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // Main function to run the application
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 /// The main application widget that wraps everything inside MaterialApp
 class MyApp extends StatelessWidget {
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false, // Hides the debug banner
       home: FavoriteMoviesScreen(), // Sets the home screen
     );
@@ -32,8 +32,8 @@ class FavoriteMoviesScreen extends StatelessWidget {
 /// Builds a custom AppBar with a gradient background and icons
 AppBar buildAppBar() {
   return AppBar(
-    leading: Icon(Icons.movie, color: Colors.white), // Movie icon on the left
-    title: Text(
+    leading: const Icon(Icons.movie, color: Colors.white), // Movie icon on the left
+    title: const Text(
       'Favorite Movies',
       style: TextStyle(
         fontSize: 24,
@@ -43,14 +43,14 @@ AppBar buildAppBar() {
     ),
     actions: [
       IconButton(
-        icon: Icon(Icons.favorite, color: Colors.white), // Favorite icon
+        icon: const Icon(Icons.favorite, color: Colors.white), // Favorite icon
         onPressed: () {
           // Placeholder for future favorite action
         },
       ),
     ],
     flexibleSpace: Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [Colors.blueAccent, Colors.purpleAccent], // Gradient colors
           begin: Alignment.topLeft,
@@ -80,8 +80,8 @@ class FavoriteMoviesList extends StatelessWidget {
     return Column(
       children: [
         // Title section with padding
-        Padding(
-          padding: const EdgeInsets.all(16.0),
+        const Padding(
+          padding: EdgeInsets.all(16.0),
           child: Text(
             'My Favorite Movies',
             style: TextStyle(
@@ -101,10 +101,10 @@ class FavoriteMoviesList extends StatelessWidget {
                 color: Colors.blueAccent, // Set the background color of the card
                 elevation: 4, // Adds shadow effect to the card
                 child: ListTile(
-                  contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 30), // Padding for content inside ListTile
+                  contentPadding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30), // Padding for content inside ListTile
                   title: Text(
                     movie['title'], // Movie title
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -112,7 +112,7 @@ class FavoriteMoviesList extends StatelessWidget {
                   ),
                   subtitle: Text(
                     'IMDb Rating: ${movie['rating']}', // Display IMDb rating
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                       color: Colors.yellow,
                     ),
