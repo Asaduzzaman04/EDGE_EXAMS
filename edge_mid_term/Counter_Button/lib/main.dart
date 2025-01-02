@@ -38,7 +38,10 @@ class _CounterScreenState extends State<CounterScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Counter App', style: TextStyle(color: Colors.white) ,),
+        title: Text(
+          'Counter App',
+          style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: Colors.deepPurple,
       ),
       backgroundColor: Colors.lightBlue[50],
@@ -70,7 +73,10 @@ class _CounterScreenState extends State<CounterScreen> {
             SizedBox(height: 30),
             Text(
               'Button Pressed $_counter times!',
-              style: TextStyle(fontSize: 18, color: Colors.deepPurple, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.deepPurple,
+                  fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 20),
             Text(
@@ -83,4 +89,3 @@ class _CounterScreenState extends State<CounterScreen> {
     );
   }
 }
-
